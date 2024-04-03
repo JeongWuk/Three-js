@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 const Object = () => {
   const containerRef = useRef();
-  const container = containerRef.current;
 
   return (
     <ObjectContainer ref={containerRef}>
