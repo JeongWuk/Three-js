@@ -1,14 +1,10 @@
 import styled from "styled-components";
-import Header from "../components/Header";
 import ContentList from "../components/ContentList";
-// import Banner from "../components/Banner";
 
 const Home = () => {
   return (
     <>
-      <Header />
       <HomeContainer>
-        {/* <Banner /> */}
         <ContentList />
       </HomeContainer>
     </>
@@ -18,10 +14,14 @@ const Home = () => {
 export default Home;
 
 const HomeContainer = styled.div`
+  margin-top: 4rem;
   width: 100%;
-  height: auto;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 1rem;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;

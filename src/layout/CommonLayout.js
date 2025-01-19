@@ -1,9 +1,11 @@
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
+import Header from "../components/common/Header";
 
 const CommonLayout = () => {
   return (
     <Common>
+      <Header />
       <Outlet />
     </Common>
   );
@@ -16,6 +18,9 @@ const Common = styled.div`
   flex-direction: column;
   align-items: center;
   width: 500px;
-  background-color: aliceblue;
   position: relative;
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 `;

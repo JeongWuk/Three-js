@@ -6,6 +6,7 @@ import Earth from "./components/Earth";
 import Moon from "./components/Moon";
 import Object from "./pages/Object";
 import Move from "./components/Move";
+import BasketBall from "./components/BasketBall";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Route element={<CommonLayout />}>
         <Route path={"/"} element={<Home />} />
         <Route element={<Object />}>
+          <Route path={"/basketball"} element={<BasketBall />} />
           <Route path={"/earth"} element={<Earth />} />
           <Route path={"/moon"} element={<Moon />} />
           <Route path={"/move"} element={<Move />} />

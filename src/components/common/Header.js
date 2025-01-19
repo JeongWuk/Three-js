@@ -15,20 +15,21 @@ const Header = () => {
 export default Header;
 
 const HeaderContainer = styled.div`
-  width: 500px;
+  width: 100%;
+  height: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
-  position: fixed;
+  position: absolute;
   top: 0;
-  background-color: lightgreen;
+  background-color: white;
 `;
 
 const Logo = styled.div`
-  width: 5rem;
+  width: 8rem;
   height: 100%;
-  background-image: url(https://cdn.banggooso.com/assets/images/common/logo_2023.png);
+  background-image: url('images/PlayGround.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;

@@ -6,9 +6,9 @@ const ContentList = () => {
   return (
     <ContentListContainer>
       {data.map((content) => (
-        <Link key={content.id} to={content.link}>
-          <Content>
-            <ContentCategory>{content.category}</ContentCategory>
+        <Content key={content.id}>
+          <ContentCategory>{content.category}</ContentCategory>
+          <Link to={content.link}>
             <ContentImage src={content.imageUrl} alt="image" />
             <ContentDescContainer>
               <div>
@@ -19,8 +19,8 @@ const ContentList = () => {
                 <div>조회수 : {content.click}</div>
               </ContentSubDescContainer>
             </ContentDescContainer>
-          </Content>
-        </Link>
+          </Link>
+        </Content>
       ))}
     </ContentListContainer>
   );
@@ -29,33 +29,32 @@ const ContentList = () => {
 export default ContentList;
 
 const ContentListContainer = styled.div`
-  margin-top: 3rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
 `;
 
 const Content = styled.div`
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: all 0.1s linear;
-  background-color: white;
-
-  &:hover {
-    scale: 1.05;
-    background-color: gainsboro;
-  }
+  border-radius: 0.625rem;
 `;
 
 const ContentCategory = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
   font-family: "Pretendard";
   font-size: 2rem;
   font-weight: 900;
   padding: 0.5rem 0;
   color: black;
+  background-color: gainsboro;
 `;
 
 const ContentImage = styled.img`
